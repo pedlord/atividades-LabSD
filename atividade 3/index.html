@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização, Equação e Ordenação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Visualização de Arquivos, Equação do 2º Grau e Ordenação</h1>
+
+        <!-- visualizar imagem, texto ou vídeo -->
+        <div class="view-section">
+            <h2>1 - Visualizar Arquivo</h2>
+            <button id="viewImageBtn">Visualizar Imagem</button>
+            <button id="viewTextBtn">Visualizar Texto</button>
+            <button id="viewVideoBtn">Visualizar Vídeo</button>
+            <div id="fileContainer"></div>
+        </div>
+
+        <!-- resolver equação do 2º grau -->
+        <div class="quadratic-section">
+            <h2>2 - Resolver Equação do 2º Grau</h2>
+            <input type="number" id="a" placeholder="Digite o coeficiente a">
+            <input type="number" id="b" placeholder="Digite o coeficiente b">
+            <input type="number" id="c" placeholder="Digite o coeficiente c">
+            <button id="solveQuadraticBtn">Resolver Equação</button>
+            <p id="quadraticResult"></p>
+        </div>
+
+        <!-- gerar e ordenar números aleatórios -->
+        <div class="sort-section">
+            <h2>3 - Ordenação de Números Aleatórios</h2>
+            <input type="number" id="arraySize" placeholder="Digite a quantidade de números aleatórios">
+            <button id="generateAndSortBtn">Gerar e Ordenar</button>
+            <p id="originalArray"></p>
+            <p id="sortedArray"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
