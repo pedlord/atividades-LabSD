@@ -10,11 +10,15 @@ import java.rmi.registry.Registry;
 
 public class Cliente {
     public static void main(String[] args) {
+        if (args.length < 1) {
+            System.out.println("Uso: java Cliente <tipoServico>");
+            return;
+        }
         try {
             Registry registry = LocateRegistry.getRegistry("localhost", 1099);
             ServidorDeNomes servidorDeNomes = (ServidorDeNomes) registry.lookup("ServidorDeNomes");
 
-            String tipoServico = "TCP"; // Alternar entre "TCP" e "UDP"
+            String tipoServico = args[0].toUpperCase(); // Alternar entre "TCP" e "UDP"
             String endereco = servidorDeNomes.getEnderecoServidor(tipoServico);
 
             if (tipoServico.equals("TCP")) {
